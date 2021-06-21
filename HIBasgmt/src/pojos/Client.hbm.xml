@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 19, 2021 3:41:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Client" table="client" catalog="hearn" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="regId" type="string">
+            <column name="regId" length="20" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstName" length="500" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="500" not-null="true" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phoneNumber" length="30" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="photo" type="binary">
+            <column name="photo" />
+        </property>
+        <property name="clientCategory" type="string">
+            <column name="ClientCategory" length="300" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
